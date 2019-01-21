@@ -250,25 +250,6 @@ func (client *Client) sign(json string) (checksum string) {
   return
 }
 
-func (client *Client) statsFields() (fields []string) {
-  fields = []string{
-    "records",
-    "start",
-    "finish",
-    "answer",
-    "from_extension",
-    "from_number",
-    "to_extension",
-    "to_number",
-    "disconnect_reason",
-    "line_number",
-    "location",
-    "entry_id",
-  }
-
-  return
-}
-
 func (client *Client) stringToSlice(string string) (slice []string, err error) {
   slice = strings.Split(string[1:][:len(string)-2], `,`)
 
